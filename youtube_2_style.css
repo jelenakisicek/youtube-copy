@@ -1,0 +1,156 @@
+/* This is a CSS comment.*/
+
+body{
+    background-color: #EEEEEE;
+    font-family: arial, sans-serif;
+    margin: 0;
+    }
+
+.header{ /* logo container, search container, profile container*/
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid gray;
+}
+
+.logo-container{ /* menu lines image, logo image, logo language*/
+	width: 230px;
+	height: 100%;
+	float: left;
+}
+
+.menu_lines{
+	width: 16px;
+    margin-top: 17px;
+    float: left;
+    margin-left: 34px;
+    opacity: 0.5;
+}
+
+.logo{ 
+    width: 100px;
+    height: 100%;
+    background-image: url("images/yt-logo.png");
+    background-size: 109%;
+    margin-left: 50px;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position-y: -8px;
+    background-position-x: -4px;
+    opacity: 0.8;
+}
+
+.logo-lang{ /*HR*/
+    width: 15px;
+    height: 15px;
+    float: left;
+    position: absolute;
+    right: -3px;
+    font-size: 10px;
+    top: 10px;
+}
+
+.search-container{ /* search box, search image keyboard, magnifier box*/
+	width: 45%;
+	height: 100%;
+	float: left;
+}
+
+.search-box{
+    float: left;
+    width: 70.5%;
+    height: 27px;
+    margin-top: 10px;
+    border: 1px solid #CEC7C7;
+    padding-left: 5px;
+    line-height: 30px;
+    color: gray;
+    position: relative; /*to .search_img*/
+}
+
+.search-img{ /*keyboard image*/
+	width: 20px;
+	height: 18px;
+	position: absolute; /*to .search-box*/
+	background-image: url("images/keyboard.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    top: 3px;
+    right: 6px;
+    opacity: 0.5;
+}
+
+.magnifier-box{
+    float: left;
+    width: 8%;
+    height: 27px;
+    margin-top: 10px;
+    border: 1px solid #CEC7C7;
+    border-left: 0.5px;
+    background-image: url("images/magnifier.png");
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position-x: 25px;
+    background-position-y: 7px;
+    background-color: #F9F9F9;
+ }
+
+.profile-container{ /* upload element, bell image, avatar image */
+	width: 10.5%;
+	height: 100%;
+	float: right;
+}
+
+.upload-button{
+	float: left;
+    width: 52px;
+    height: 26px;
+    margin-top: 10px;
+    margin-left: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    background-color: #F9F9F9;
+    line-height: 27px;
+    color: #333;
+    font-size: 10.5px;
+    font-weight: bolder;
+    text-align: center;
+    border: 1px solid #CEC7C7;
+    border-radius: 2px;
+}
+
+.upload-button:hover, 
+.magnifier-box:hover{
+ 	border-color: #c6c6c6;
+    background-color: #f0f0f0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.10);
+ }
+
+.alert{
+    width: 25px;
+    height: 34px;
+    float: left;
+    margin: 12px;
+    margin-left: 24px;
+    margin-right: 24px;
+    background-image: url(images/bell.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+
+.avatar{
+    width: 26px;
+    height: 26px;
+    float: left;
+    margin-top: 11px;
+    background-image: url(images/avatar.jpeg);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.page-container{
+    width: 100%;
+    height: 900px;
+}
