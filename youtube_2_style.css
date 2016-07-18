@@ -19,7 +19,7 @@ body{
     float: left;
 }
 
-.menu_lines{
+.menu-lines{
     background-image: url('images/youtube_icon.webp');
     width: 16px;
     height: 16px;
@@ -27,6 +27,10 @@ body{
     float: left;
     margin-left: 34px;
     background-position: -423px -231px;
+}
+
+.header:hover .menu-lines{
+    opacity: 0.5;
 }
 
 .logo{ 
@@ -82,7 +86,7 @@ body{
     opacity: 0.5;
 }
 
-.magnifier-box{
+.magnifier-box{ /*magnifier image*/
     float: left;
     width: 8%;
     height: 27px;
@@ -97,7 +101,7 @@ body{
     background-color: #F9F9F9;
  }
 
-.profile-container{ /* upload element, bell image, avatar image */
+.profile-container{ /* upload element, alert image, avatar image */
     width: 10.5%;
     height: 100%;
     float: right;
@@ -152,37 +156,58 @@ body{
     border-radius: 50%;
 }
 
-.page-container{
+.page-container{ /*left container i right container*/
     width: 100%;
-    height: 900px;
+    height: 100vh;
 }
 
-.left-container{
+.left-container{ /*containes main element sidebar-content*/
     width: 230px;
     height: 100%;
     float: left;
     background-color: white;
+    overflow-y: scroll;
 }
 
-.sidebar-content{
+.sidebar-content{ /*are 3 same elements .sidebar-sections aka home section, library section and subscriptions section*/
     width: 186px;
     margin: 22px;
     margin-top: 13px;
 }
 
-.sidebar-wrapper{
+.sidebar-section{ /*regulates left side of page in 3 sections - 1st part home-watch later section, 2nd part is library section and 3rd part is subscriptions section*/
     border-bottom: 1px solid lightgray;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
 
-.item-container{
+.sidebar-title{ /*regulates 2 individual elements - library and subscriptions*/
+    width: 90px;
+    line-height: 11px;
+    font-size: 11px;
+    color: #DC0C13;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 4px;
+}
+
+.sidebar-title:hover{
+    text-decoration: underline;
+}
+
+.item-container{ /*regulates 21 item of the left side page aka home, my channel, trending, subsriptions (in firs section of sidebar-content/sidebara-section, history, watch later, kafane, folk, strano, show more, lapsusbandofficial, david chen, etc)*/
+    /*containes item-icon and item-text for each item*/
     width: 186px;
     height: 28px;
 }
 
-.item-icon{
-    background-image: url('images/youtube_icon.webp');
+.item-container:hover{ /*regulates effect of 21 item of the left side page aka home, my channel, trending, subsriptions (in firs section of sidebar-content/sidebara-section, history, watch later, kafane, folk, strano, show more, lapsusbandofficial, david chen, etc)*/
+    background-color: #222;
+    color: white;
+}
+
+.item-icon{ /*containes image icon connected to the item-text*/
+    background-image: url('images/youtube_icon.webp'); /*this image containes all icons used on this page*/
     width: 20px;
     height: 20px;
     float: left;
@@ -191,7 +216,7 @@ body{
     margin-top: 4px;
 }
 
-.item-text{
+.item-text{ /*define text of 21 individual item of the left side page*/
     width: 146px;
     line-height: 28px;
     float: left;
@@ -199,52 +224,81 @@ body{
     font-weight: 500;
 }
 
-.home-icon{
+.home-icon{ /*icon image taken from the bigger image that containes all icons in this page. bigger image is set as a default background of .item-icon class*/ /*cthis class defines exact position of this uniqe icon on the bigger image*/
     background-position: -419px -279px;
 }
 
-.selected .home-icon{
+.selected .home-icon{ /*icon image taken from the bigger image that containes all icons in this page. bigger image is set as a default background of .item-icon class*/ /*cthis class defines exact position of this uniqe icon on the bigger image*/
     background-position: -460px -96px;  
 }
 
-.channel-icon{
-    background-position: -652px -306px;
-}
-
-.trending-icon{
-    background-position: -674px 0;
-}
-
-.subscriptions-icon{
-    background-position: -674px -65px;
-}
-
-.history-icon{
-    background-position: -154px -67px;
-}
-
-.watchlater-icon{
-    background-position: -507px -233px;
-}
-
-.menu-icon{
-    background-position: -288px -110px;
-}
-
-.invisible-icon{
-    background: transparent;    
-}
-
-.placeholder-img{
-    background: gray;
-}
-
-.selected{
+.selected, 
+.selected:hover{ /*class related to the 1st item-container at left side of the page, that containes home icon and home text*/
     background-color: #cc181e;
 }
 
-.selected .item-text{
+.selected .item-text{ /*class related to the 1st item-container at left side of the page, that containes home icon and home text*/
     color: white;
+}
+
+.channel-icon{ /*icon image taken from the bigger image that containes all icons in this page. bigger image is set as a default background of .item-icon class*/ /*cthis class defines exact position of this uniqe icon on the bigger image*/
+    background-position: -652px -306px;
+}
+
+.item-container:hover .channel-icon{ /*regulates effect of my channel item of the left side page*/
+    background-position: -722px 0;
+}
+
+.trending-icon{ /*icon image taken from the bigger image that containes all icons in this page. bigger image is set as a default background of .item-icon class*/ /*cthis class defines exact position of this uniqe icon on the bigger image*/
+    background-position: -674px 0;
+}
+
+.item-container:hover .trending-icon{ /*regulates effect of trending item of the left side page*/
+    background-position: -531px -233px;
+}
+
+.subscriptions-icon{ /*icon image taken from the bigger image that containes all icons in this page. bigger image is set as a default background of .item-icon class*/ /*cthis class defines exact position of this uniqe icon on the bigger image*/
+    background-position: -674px -65px;
+}
+
+.item-container:hover .subscriptions-icon{ /*regulates effect of subscriptions item of the left side page*/
+    background-position: -243px 0;
+}
+
+.history-icon{ /*icon image taken from the bigger image that containes all icons in this page. bigger image is set as a default background of .item-icon class*/ /*cthis class defines exact position of this uniqe icon on the bigger image*/
+    background-position: -154px -67px;
+}
+
+.item-container:hover .history-icon{ /*regulates effect of history item of the left side page*/
+    background-position: -168px -279px;
+}
+
+.watchlater-icon{ /*icon image taken from the bigger image that containes all icons in this page. bigger image is set as a default background of .item-icon class*/ /*cthis class defines exact position of this uniqe icon on the bigger image*/
+    background-position: -507px -233px;
+}
+
+.item-container:hover .watchlater-icon{ /*regulates effect of watch later item of the left side page*/
+    background-position: -628px -306px;
+}
+
+.menu-icon{ /*icon image taken from the bigger image that containes all icons in this page. bigger image is set as a default background of .item-icon class*/ /*cthis class defines exact position of this uniqe icon on the bigger image*/
+    background-position: -288px -110px;
+}
+
+.item-container:hover .menu-icon { /*regulates effect of menu icon itemm of the left side page*/
+    background-position: -731px -201px;
+}
+
+.invisible-icon{ /*is placeholder element connected to the 'show more' .item-text in the sidebar-section in the middle of left container*/
+    background: transparent;    
+}
+
+.placeholder-img{ /*regulates images connected to the elements on the left side of the page in sidebar sections which starts with side title SUBSCRIPTIONS*/
+    background: gray;
+}
+
+.item-container:hover .placeholder-img{ /*regulates effect of item at the left side page in sidebar sections which starts with side title SUBSCRIPTIONS*/
+    background-color: white;
 }
 
 .right-container{
@@ -254,6 +308,13 @@ body{
     background-color: gray;
 }
 
+.site-menu{
+
+}
+
+.main-content{
+
+}
 
 
 
