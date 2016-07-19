@@ -10,7 +10,7 @@ body{
     background-color: white;
     width: 100%;
     height: 50px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 .logo-container{ /* menu lines image, logo image, logo language*/
@@ -29,7 +29,7 @@ body{
     background-position: -423px -231px;
 }
 
-.header:hover .menu-lines{
+.header:hover .menu-lines{ /*action displayed on menu-lines when header is hovered*/
     opacity: 0.5;
 }
 
@@ -46,7 +46,7 @@ body{
     opacity: 0.8;
 }
 
-.logo-lang{ /*HR*/
+.logo-lang{ /*HR aka regulated language of the current state*/
     width: 15px;
     height: 15px;
     float: left;
@@ -60,6 +60,7 @@ body{
     width: 45%;
     height: 100%;
     float: left;
+    padding-left: 4px;
 }
 
 .search-box{
@@ -301,24 +302,119 @@ body{
     background-color: white;
 }
 
-.right-container{
+.right-container{ /*containes site menu container (home,trending,subscriptions) and main content container*/
+/*containes every video shown on the page*/
     width: 87%;
     height: 100%;
     float: right;
-    background-color: gray;
+    background-color: #EEEEEE;
 }
 
-.site-menu{
-
+.site-menu-container{ 
+/*positioned as a first element at the right  container*/ /*containes site-menu-text-container which containes home, trending and subscriptions as site-menu-text-line*/
+    width: 100%;
+    height: 40px;
+    background-color: white;
 }
 
-.main-content{
+.site-menu-text-container{
+    width: 238px;
+    height: 40px;
+    margin: 0 auto;
+}
 
+.site-menu-text-line{
+    width: auto;
+    line-height: 35px;
+    color: gray;
+    float: left;
+    font-size: 13px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-top: 2px
 }
 
 
+.site-menu-text-line:hover, 
+.site-menu-text-line.active{
+    border-bottom: 3px solid #cc181e;
+}
+
+.site-menu-text-line.active{
+    font-weight: bold;
+}
+
+.main-content-container{ 
+/*containtes every video shown on the page, head element is general container shown 9 times in this container*/
+    width: 1262px;
+    height: 2150px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: white;
+}
 
 
+.general-container{ /*containes box title and 6 videos in the row positioned in the box-content*/
+    background-color: white;
+    border-bottom: 1px solid #eeeeee;
+    padding-left: 17px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+
+.general-container:first-child{
+    padding-bottom: 11px;
+}
+
+.general-container-title{ /* defines primary title of the hole box*/
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-left: 1px;
+}
+
+.general-container-title span{ /*defines secundary title of the box*/
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.general-container-title .item-icon{
+    margin-top: -1px;
+    margin-left: 0px;
+}
+
+.general-container-content{ /*containes 6 unit boxes aka videos boxes*/
+    margin-top: 7px;
+    height: 165px;
+}
+
+.unit-box{ /*containes 1 unit image aka video image, 1 unit title aka video name and 1 video description*/
+    width: 196px;
+    height: 170px;
+    margin-right: 10px;
+    float: left;
+}
+
+.unit-image{
+    width: 196px;
+    height: 110px;
+}
+
+.unit-title{
+    font-size: 13px;
+    color: #167ac6;
+    font-weight: bold;
+    line-height: 15px;
+    padding-top: 1px;
+}
+
+.unit-description{
+    font-size: 10.5px;
+    color: gray;
+    line-height: 12px;
+    padding-top: 2px;
+}
 
 
 
