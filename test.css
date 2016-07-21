@@ -1,0 +1,87 @@
+body{
+}
+
+.main-content-container{
+	width: 1262px;
+	min-height: 2150px;
+	margin: 0 auto;
+	margin-top: 10px;
+	background-color: purple;
+}
+
+.basic-wrapper{
+	min-height: 100px;
+	padding	: 15px;
+	background-color: lightgreen;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.general-container{
+	background-color: green;
+	padding: 5px;
+}
+
+.general-container-header{
+	background-color: orange;
+	height: 50px;
+}
+
+.header-title{
+	font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-left: 1px;
+}
+
+.header-title span{ /*defines secundary title of the box*/
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.header-title .item-icon{
+    margin-top: -1px;
+    margin-left: 0px;
+}
+.general-container-content{
+    background-color: yellow;
+    min-width: 196px;
+}
+
+.unit-box{
+    background-color: gray;
+    min-height: 20px;
+    min-width: 180px;
+    padding: 1%;
+    display: inline-block;
+    width: 30.6%;
+}
+
+.unit-box-image{
+    width: 196px;
+    height: 110px;    
+    background-image: url(images/sug1.png);
+}
+
+.unit-box-title{
+	height: 20px;
+    width: 176px;
+    background-color: lightgray;
+
+    font-size: 13px;
+    color: #167ac6;
+    font-weight: bold;
+    line-height: 15px;
+    padding-top: 1px;
+}
+
+.unit-box-description{
+	height: 10px;
+    width: 176px;
+    background-color: #eeeeee;
+
+    font-size: 10.5px;
+    color: gray;
+    line-height: 12px;
+    padding-top: 2px;
+}
