@@ -20,7 +20,7 @@ body{
 }
 
 .menu-lines{
-    background-image: url('images/youtube_icon.webp');
+    background-image: url('images/youtube_icon.png');
     width: 16px;
     height: 16px;
     margin-top: 17px;
@@ -35,14 +35,13 @@ body{
 
 .logo{ 
     width: 100px;
-    height: 100%;
+    height: 50px;
     background-image: url("images/yt-logo.png");
     background-size: 109%;
     margin-left: 50px;
     background-repeat: no-repeat;
     position: relative;
-    background-position-y: -8px;
-    background-position-x: -4px;
+    background-position: -4px -8px;
     opacity: 0.8;
 }
 
@@ -89,17 +88,23 @@ body{
 
 .magnifier-box{ /*magnifier image*/
     float: left;
-    width: 8%;
-    height: 27px;
+    width: 38px;
+    height: 21px;
     margin-top: 10px;
     border: 1px solid #CEC7C7;
     border-left: 0.5px;
-    background-image: url("images/magnifier.png");
-    background-size: 15px;
-    background-repeat: no-repeat;
-    background-position-x: 25px;
-    background-position-y: 7px;
     background-color: #F9F9F9;
+    padding-left: 19px;
+    padding-top: 6px;
+ }
+
+ .magnifier-img{ /*magnifier image*/
+    width: 18px;
+    height: 16px;
+    background-image: url("images/youtube_icon.png");
+    background-repeat: no-repeat;
+    background-position: -340px -209px;
+    opacity: 0.6;
  }
 
 .profile-container{ /* upload element, alert image, avatar image */
@@ -159,12 +164,12 @@ body{
 
 .page-container{ /*left container i right container*/
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .left-container{ /*containes main element sidebar-content*/
     width: 230px;
-    height: 100%;
+    height: calc(100vh - 50px);
     float: left;
     background-color: white;
     overflow-y: scroll;
@@ -208,7 +213,7 @@ body{
 }
 
 .item-icon{ /*containes image icon connected to the item-text*/
-    background-image: url('images/youtube_icon.webp'); /*this image containes all icons used on this page*/
+    background-image: url('images/youtube_icon.png'); /*this image containes all icons used on this page*/
     width: 20px;
     height: 20px;
     float: left;
@@ -304,7 +309,7 @@ body{
 
 .right-container{ /*containes site menu container (home,trending,subscriptions) and main content container*/
 /*containes every video shown on the page*/
-    width: calc(100% - 240px); /*calc znaci da uzme 100% sirinu ekrana koliko god to bilo i oduzme fixni dio u ovom slucaju 240px koliko je sirina left sidebaar*/
+    width: calc(100% - 230px); /*calc znaci da uzme 100% sirinu ekrana koliko god to bilo i oduzme fixni dio u ovom slucaju 240px koliko je sirina left sidebaar*/
     height: 100%;
     float: left;
     background-color: #EEEEEE;
@@ -312,7 +317,7 @@ body{
 
 .site-menu-container{ 
 /*positioned as a first element at the right  container*/ /*containes site-menu-text-container which containes home, trending and subscriptions as site-menu-text-line*/
-    width: 101%;
+    width: 100%;
     height: 40px;
     background-color: white;
 }
@@ -333,7 +338,6 @@ body{
     margin-right: 12px;
     padding-top: 2px
 }
-
 
 .site-menu-text-line:hover, 
 .site-menu-text-line.active{
@@ -457,7 +461,7 @@ body{
 
 .play-img{ 
     position: absolute;
-    background-image: url("images/youtube_icon.webp");
+    background-image: url("images/youtube_icon.png");
     background-repeat: no-repeat;
     background-position: -532px 0;
     top: 6px;
@@ -487,7 +491,7 @@ body{
     height: 20px;
     margin-top: -1px;
     margin-left: 5px;
-    background-image: url("images/youtube_icon.webp");
+    background-image: url("images/youtube_icon.png");
     background-repeat: no-repeat;
     background-position: -24px -79px;
     opacity: 0.2;
@@ -600,11 +604,6 @@ body{
     right: 31px;
 }
 
-
-
-
-
-
 .video-minutes{
     position: relative;
     display: inline-block;
@@ -627,16 +626,10 @@ body{
 .hover-minutes div{
     width: 13px;
     height: 13px;
-    background-image: url(images/youtube_icon.webp);
+    background-image: url(images/youtube_icon.png);
     background-position: -698px -108px;
     opacity: 0.7;
 }
-
-
-
-
-
-
 
 .unit-box-text{
     width: 196px;
@@ -683,9 +676,6 @@ body{
     color:  #167ac6;
 }
 
-
-
-
 .general-container-footer{
     /*background-color: orange;*/
     min-height: 10px;
@@ -700,14 +690,6 @@ body{
     padding-left: 1px;
     float: right;
 }
-
-
-
-
-
-
-
-
 
 .greater-than-sign{
     width: 10px;
@@ -739,14 +721,138 @@ body{
     text-align: center;
     border: 1px solid #CEC7C7;
     border-radius: 2px;
+}
 
+.page-footer{ 
+    width: 100%;
+    /*height: 40px;*/
+    background-color: white;
+    display: inline-block;
+    /*clear: both;  nema elemenata sa jedne ili druge strane*/
+    margin-top: 50px;    
+}
+
+.page-footer-content-container{
+    padding: 5px;
+}
+
+.page-footer-buttons-container{
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 20px;
+    margin-left: 20px;
+}
+
+.logo-footer{
+    float: left;
+    width: 85px;
+}
+
+.logo-img-footer{
+    margin-left: -15px;
 }
 
 
+.button{
+    height: 26px;
+    background-color: #F9F9F9;
+    line-height: 27px;
+    color: #333;
+    font-size: 10.5px;
+    display: inline-block;
+    border: 1px solid #CEC7C7;
+    border-radius: 2px;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+}
 
+.button:hover {
+    border-color: #c6c6c6;
+    background-color: #f0f0f0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.10);
+ }
 
+ .button-bold{
+    font-weight: bold;
+ }
 
+.language-button {
+    padding-left: 45px;
+}
 
+.language-button:before {
+    width: 33px;
+    height: 20px;
+    background-position: -121px -43px;
+    background-image: url(images/youtube_icon.png);
+    opacity: 0.5;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 5px;
+}    
 
+.history-button {
+    padding-left: 30px;
+}
 
+.history-button:before {
+    width: 14px;
+    height: 20px;
+    background-position: -516px 0;
+    background-image: url(images/youtube_icon.png);
+    opacity: 0.5;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}    
 
+.help-button {
+    padding-left: 32px;
+}
+
+.help-button:before {
+    width: 16px;
+    height: 20px;
+    background-position: 0 -92px;
+    background-image: url(images/youtube_icon.png);
+    opacity: 0.5;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}    
+
+.page-footer-text-container{
+    margin-top: 12px;
+    display: inline-block;
+}
+
+.text-row{
+    clear: both;
+    margin-left: 20px;
+    margin-top: 3px;
+
+}
+
+.text{
+    /* width: 65px; */
+    /* color: #167ac6; */
+    font-size: 11px;
+    line-height: 20px;
+    padding-left: 1px;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.text-bold{
+    font-size: 13px;
+    font-weight: bold;
+}
