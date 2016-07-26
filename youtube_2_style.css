@@ -65,26 +65,33 @@ body{
 .search-box{
     float: left;
     width: 70.5%;
-    height: 27px;
+    height: 25px;
     margin-top: 10px;
     border: 1px solid #CEC7C7;
     padding-left: 5px;
-    line-height: 30px;
-    color: gray;
-    position: relative; /*to .search_img*/
+    /* line-height: 10px; */
+    color: #666;
+    position: relative;
+    font-size: 16px; /*to .search_img*/
 }
 
-.search-img{ /*keyboard image*/
+.search-box:focus{
+    outline: none;
+    border-color: #041b80;
+    box-shadow: 0px 1px 5px 0px rgb(189, 182, 183) inset;
+}
+
+/*.search-img{ /*keyboard image
     width: 20px;
     height: 18px;
-    position: absolute; /*to .search-box*/
+    position: absolute;
     background-image: url("images/keyboard.png");
     background-size: 20px;
     background-repeat: no-repeat;
     top: 3px;
     right: 6px;
     opacity: 0.5;
-}
+}*/
 
 .magnifier-box{ /*magnifier image*/
     float: left;
@@ -179,12 +186,18 @@ body{
     width: 186px;
     margin: 22px;
     margin-top: 13px;
+    margin-bottom: -10px;
+
 }
 
 .sidebar-section{ /*regulates left side of page in 3 sections - 1st part home-watch later section, 2nd part is library section and 3rd part is subscriptions section*/
     border-bottom: 1px solid lightgray;
     padding-bottom: 10px;
     margin-bottom: 10px;
+}
+
+.bottom-section{
+    border-bottom: none;
 }
 
 .sidebar-title{ /*regulates 2 individual elements - library and subscriptions*/
@@ -228,6 +241,14 @@ body{
     float: left;
     font-size: 13px;
     font-weight: 500;
+}
+
+.item-text span{
+    display: inline-block;
+    float: right;
+    font-size: 11px;
+    color: gray;
+    padding-right: 10px;
 }
 
 .home-icon{ /*icon image taken from the bigger image that containes all icons in this page. bigger image is set as a default background of .item-icon class*/ /*cthis class defines exact position of this uniqe icon on the bigger image*/
@@ -289,6 +310,22 @@ body{
 
 .menu-icon{ /*icon image taken from the bigger image that containes all icons in this page. bigger image is set as a default background of .item-icon class*/ /*cthis class defines exact position of this uniqe icon on the bigger image*/
     background-position: -288px -110px;
+}
+
+.browse-icon{
+    background-position: -68px -204px;
+}
+
+.item-container:hover .browse-icon{ /*regulates effect of trending item of the left side page*/
+    background-position: -568px -258px;
+}
+
+.manage-icon{
+    background-position: -698px -151px;
+}
+
+.item-container:hover .manage-icon{ /*regulates effect of trending item of the left side page*/
+    background-position: -568px -306px;
 }
 
 .item-container:hover .menu-icon { /*regulates effect of menu icon itemm of the left side page*/
@@ -529,13 +566,12 @@ body{
     text-align: center;
     line-height: 110px;
     font-size: 12.5px;
+    z-index: 1;
 }
 
 .mixes .hover-img:hover{
-    opacity: 1;
     background-color: rgba(0,0,0,0.7);
     color: white;
-    z-index: 1;
 }
 
 .hover-img:hover .video-minutes{
@@ -734,6 +770,8 @@ body{
 
 .page-footer-content-container{
     padding: 5px;
+    padding-bottom: 30px;
+
 }
 
 .page-footer-buttons-container{
